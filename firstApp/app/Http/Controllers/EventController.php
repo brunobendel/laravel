@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\ProgramacaoDiva;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -19,7 +21,11 @@ class EventController extends Controller
         $dataAtual = Carbon::now(); // Obtém a data e hora local atual
         
         $dataFormatada = $dataAtual->format('d/m/Y H:i:s');// Você pode formatar a data de acordo com suas necessidades
-    
+        
+        // conexão com o model
+        $test = ProgramacaoDiva::get();
+
+
         return view('teste', 
         [
             'nome'=> $nome, 
@@ -27,7 +33,10 @@ class EventController extends Controller
             'arr'=> $arr,
             'date'=> $date,
             'dataFormatada'=> $dataFormatada,
-            'nomes'=> $nomes
+            'nomes'=> $nomes,
+            'jsFilePath' => asset('js/scripts2.js'),
+            'test' => $test,
+
         ]);
     }
 

@@ -27,9 +27,18 @@
     <p>{{$loop->index}} {{$nome}}</p>
 
 @endforeach
+
+@foreach ($test as $t)
+    <p>{{$t->email}}</p>
+@endforeach
+
+
 <br><br>
 {{-- Data --}}
 <p>data tipo php puro {{$date}}</p>
 <p>data usando a class carbon {{$dataFormatada}}</p>
+
+<h1>Interagindo com um botão</h1>
+<button onclick="clicou()">Clica em mim!</button>
 
 @endsection

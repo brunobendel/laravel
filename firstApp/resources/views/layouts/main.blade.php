@@ -19,6 +19,8 @@
 
         <!-- JS da aplicação -->
         <script src="/js/scripts.js" ></script>
+        
+        <script src="{{ $jsFilePath }}"></script>
 
     </head>
     <body>
@@ -52,7 +54,7 @@
         <footer>
         <p>© 2023 Goodyear do Brasil - Informação confidencial e/ou privilegiada. Este conteúdo não pode ser reproduzido ou compartilhado</p>  
         </footer>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        {{-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> --}}
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
 
