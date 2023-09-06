@@ -7,6 +7,26 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Config database Oracle
+
+1- Configurar arquvo .env com sua conexão. 
+
+2 – exacutar divre da conexão  usando composer 
+    Ex:  oracle.yaaja.8oci 
+
+3- executar php artisan migrate par testar conexão. 
+    Ex: Laravel vai criar 3 tabelas
+
+## Config Migrate e Model
+<!-- Como criar tabela -->
+php artisan make:migration create_contrucao_table
+<!-- Como subir a tabela para o Banco -->
+php artisan migrate
+ <!-- Consultar status das tabelas para serem criadas -->
+php artisan migrate:status
+ <!-- Para reverter a operação de migração mais recente -->
+php artisan migrate:rollback
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -62,3 +82,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+

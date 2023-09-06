@@ -11,7 +11,7 @@
 @endif
 
 
-<img src="/img/banner.jpg" alt="banner" id="banner">
+<img src="/img/banner.jpg" alt="banner" id="banner" style="max-height: 200">
 
 <br><br>
 
@@ -29,11 +29,12 @@
 @endforeach
 
 @foreach ($test as $t)
-    <p>{{$t->email}}</p>
+    <p>{{$t->material}}</p>
 @endforeach
 
 
 <br><br>
+
 {{-- Data --}}
 <p>data tipo php puro {{$date}}</p>
 <p>data usando a class carbon {{$dataFormatada}}</p>

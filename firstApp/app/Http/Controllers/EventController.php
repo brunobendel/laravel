@@ -23,8 +23,9 @@ class EventController extends Controller
         $dataFormatada = $dataAtual->format('d/m/Y H:i:s');// Você pode formatar a data de acordo com suas necessidades
         
         // conexão com o model
-        $test = ProgramacaoDiva::get();
+        $test = ProgramacaoDiva::get(); //Programacaodiva é o nome da tabela
 
+        //dd($test->material);
 
         return view('teste', 
         [
