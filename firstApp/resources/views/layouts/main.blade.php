@@ -20,7 +20,7 @@
         <!-- JS da aplicação -->
         <script src="/js/scripts.js" ></script>
         
-        <script src="{{ $jsFilePath }}"></script>
+        {{-- <script src="{{ $jsFilePath }}"></script> --}}
 
     </head>
     <body>
@@ -38,7 +38,7 @@
                             <a href="/events/create" class="nav-link">Criar Eventos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Entrar</a>
+                            <a href="/contact" class="nav-link">Entrar</a>
                         </li>
                         <li class="nav-item">
                             <a href="/" class="nav-link">Cadastrar</a>

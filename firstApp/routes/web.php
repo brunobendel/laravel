@@ -2,19 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\TestController;
+
 
 Route::get('/',[EventController::class,'index']);
+
 Route::get('/events/create',[EventController::class,'create']);
 
-Route::get('/produtos', function () {
-
-    // Resgatando parâmetros de URL
-    $busca = request('search');
-
-    return view('products',['busca' => $busca]);
+Route::get('/contact', function () {
+    return view('contact');
 });
 
-
-Route::get('/produtos_teste/{id?}', function ($id = null) {
-    return view('product', ['id'=> $id]);
-});
+Route::get('/test',[TestController::class,'index']); //Controller de teste
