@@ -26,10 +26,20 @@ class EventController extends Controller
         return view('events.create');
     }
 
-    public function contact()
+    public function store(Request $request)
     {
-        
-        return view('events.contact');
+        $event = new Event;
+
+        $event->title = $request->title;
+        $event->city = $request->city;
+        $event->description = $request->description;
+        $event->privete = $request->privete;
+
+        $event->save();
+
+        return redirect('/');
+
     }
+    
 
 }
