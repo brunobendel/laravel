@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+
 
 class EventController extends Controller
 {
@@ -13,6 +15,7 @@ class EventController extends Controller
         $events = Event::all();
 
 
+
         return view('welcome', 
         [
             'events' => $events,
@@ -20,9 +23,7 @@ class EventController extends Controller
         ]);
     }
 
-    public function create()
-    {
-        
+    public function create(){
         return view('events.create');
     }
 
@@ -33,8 +34,7 @@ class EventController extends Controller
         $event->title = $request->title;
         $event->city = $request->city;
         $event->description = $request->description;
-        $event->privete = $request->privete;
-
+        $event->private = $request->private;
         $event->save();
 
         return redirect('/');
