@@ -4,19 +4,20 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddImageToEventsTable extends Migration
+class AddItemsToEventsTable extends Migration
 {
     /**
-     * Run the migrations.  Não funcionou
+     * Run the migrations.
      *
      * @return void
      */
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->string('image');
+            $table->json('items')->default(json_encode([])); // Define um valor padrão vazio
         });
     }
+    
 
     /**
      * Reverse the migrations.
@@ -26,7 +27,7 @@ class AddImageToEventsTable extends Migration
     public function down()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->dropColumn('image');
+            $table->dropColumn('items');
         });
     }
 }

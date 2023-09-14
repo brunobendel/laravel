@@ -21,7 +21,6 @@ class CreateContrucaoTable extends Migration
 
         });
     }
-
     /**
      * Reverse the migrations.
      *
