@@ -5,20 +5,27 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-
+use Doctrine\DBAL\Events;
 
 class EventController extends Controller
 {
     public function index()
     {      
-        // conexão com o model
-        $events = Event::all();
 
-
+        $search = request('search');
+        
+        if ($search){
+            $events = Event::where([
+                ['title','like','%'.$search.'%']
+            ])->get();
+        }else{
+            // conexão com o model
+            $events = Event::all();
+        } 
 
         return view('welcome', 
         [
-            'events' => $events,
+            'events' => $events,'search'=> $search
 
         ]);
     }
