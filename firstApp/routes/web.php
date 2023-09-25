@@ -12,12 +12,15 @@ Route::get('/events/{id}', [EventController::class, 'show']);
 
 Route::post('/events', [EventController::class, 'store']);
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::delete('/events/{id}', [EventController::class, 'destroy'])->middleware('auth');
+
+Route::get('/events/edit/{id}', [EventController::class, 'edit'])->middleware('auth');
+
+Route::put('/events/update/{id}', [EventController::class, 'update'])->middleware('auth');
+
+Route::get('/contact', function () {return view('contact');});
 
 Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
 
 Route::get('/test', [TestController::class, 'index']); //Controller de teste
-
 

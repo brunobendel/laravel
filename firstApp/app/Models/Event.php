@@ -8,14 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     use HasFactory;
-    protected $table = 'events';
 
     protected $casts = [
-        'items'=> 'array'
+        'items' => 'array'
     ];
-    protected $date = ['date'];
 
-    public function user(){
+    protected $dates = ['date'];
+
+    protected $guarded = [];
+
+    public function user() {
         return $this->belongsTo('App\Models\User');
     }
 }

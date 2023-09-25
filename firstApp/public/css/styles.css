@@ -198,6 +198,12 @@ header {
   margin-top: 10px;
 }
 
+/* Edit page */
+
+.img-preview {
+  width: 100px;
+  margin-top: 20px;
+}
 
 
 /* Dashboard */
@@ -209,6 +215,11 @@ header {
 .dashboard-events-container th {
   width: 25%;
 }
+
+.dashboard-events-container form {
+  display: inline-block;
+}
+
 
 /* footer */
 footer {
