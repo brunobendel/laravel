@@ -42,6 +42,15 @@ header {
   padding: 10px;
 }
 
+#info-container .already-joined-msg {
+  margin: 15px 0;
+  color: #004085;
+  background-color: #CCE5FF;
+  border: 1px solid #B8DAFF;
+  padding: 10px;
+  width: 275px;
+}
+
 /* navbar */
 #navbar img {
   width: 200px;
@@ -65,7 +74,7 @@ header {
 
 /* Search Container */
 #search-container {
-  background-image: url("../img/banner.jpg");
+  background-image: url("../img/banner.jpg") ;
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -74,7 +83,7 @@ header {
 }
 
 #search-container h1 {
-  color: #F2A340;
+  color: #ffffff;
   margin-bottom: 30px;
   font-weight: 900;
 }
